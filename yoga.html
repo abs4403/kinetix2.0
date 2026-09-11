@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoga — KINETIX</title>
+<meta name="description" content="Classical yoga asanas organised by the part of the body they train, with demo lookups.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/yoga.css">
+</head>
+<body class="yoga">
+
+<nav class="site-nav">
+  <a href="index.html" class="wordmark"><span class="k-half">KINE</span><span class="n-half">TIX</span></a>
+  <div class="nav-links">
+    <a href="gym.html">Gym</a>
+    <a href="yoga.html" class="active">Yoga</a>
+    <a href="index.html#calorie-meter" class="nav-cal">Calorie Meter</a>
+  </div>
+</nav>
+
+<section class="hero band">
+  <div class="rule"></div>
+  <h1>A practice for<br>every part of you</h1>
+  <p>Twenty classical asanas drawn from the hatha tradition, grouped by the region of the body they open, stretch, or steady — from the spine down to stillness itself.</p>
+</section>
+
+<div class="band filter-row" id="yoga-filters"></div>
+<div class="pose-grid band" id="yoga-grid"></div>
+
+<section class="cta-band band">
+  <a class="btn" href="index.html#calorie-meter">See how many calories your practice burns</a>
+</section>
+
+<footer class="site-footer">
+  <p>KINETIX — a demo fitness &amp; yoga project. © <span id="year"></span></p>
+</footer>
+
+<script src="js/exercises.js"></script>
+<script src="js/yoga.js"></script>
+<script src="js/main.js"></script>
+<script>
+  initListPage("yoga-grid", "yoga-filters", YOGA_POSES, "yoga");
+</script>
+</body>
+</html>

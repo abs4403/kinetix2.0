@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym — KINETIX</title>
+<meta name="description" content="Full-body strength training library with demo lookups for every exercise.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/gym.css">
+</head>
+<body class="gym">
+
+<nav class="site-nav">
+  <a href="index.html" class="wordmark"><span class="k-half">KINE</span><span class="n-half">TIX</span></a>
+  <div class="nav-links">
+    <a href="gym.html" class="active">Gym</a>
+    <a href="yoga.html">Yoga</a>
+    <a href="index.html#calorie-meter" class="nav-cal">Calorie Meter</a>
+  </div>
+</nav>
+
+<section class="hero band">
+  <p class="eyebrow">STRENGTH LIBRARY</p>
+  <h1>Every body part.<br>One clean library.</h1>
+  <p>Thirty-five exercises across seven muscle groups, each with form notes and a one-tap demo lookup. Filter by body part and go.</p>
+  <div class="stat-row">
+    <div class="stat"><b id="stat-count">—</b><span>exercises</span></div>
+    <div class="stat"><b>7</b><span>body-part groups</span></div>
+    <div class="stat"><b>3</b><span>skill levels</span></div>
+  </div>
+</section>
+
+<div class="band filter-row" id="gym-filters"></div>
+<div class="exercise-grid band" id="gym-grid" style="padding-left:0; padding-right:0;"></div>
+
+<footer class="site-footer">
+  <p>KINETIX — a demo fitness &amp; yoga project. © <span id="year"></span></p>
+</footer>
+
+<script src="js/exercises.js"></script>
+<script src="js/yoga.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("stat-count").textContent = EXERCISES.length;
+  initListPage("gym-grid", "gym-filters", EXERCISES, "gym");
+</script>
+</body>
+</html>
